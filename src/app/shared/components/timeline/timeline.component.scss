@@ -1,20 +1,49 @@
+/* Timeline — Premium Process Steps */
 .timeline {
   list-style: none;
-  padding: .2rem 0 .2rem 0;
+  padding: 0;
   margin: 0;
-  border-left: 2px dashed #c8d6ed;
-  max-width: 880px;
+  border-left: 2px solid var(--ei-border);
+  max-width: 720px;
 }
-li { display:grid; grid-template-columns:50px 1fr; gap:1rem; padding:0 0 1.35rem 1rem; position:relative; }
+
+li { 
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: var(--space-md);
+  padding: 0 0 var(--space-lg) var(--space-md);
+  position: relative;
+}
+
+li:last-child {
+  padding-bottom: 0;
+}
+
 span {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--ei-primary), var(--ei-accent));
-  color:#fff;
-  display:grid;
-  place-items:center;
-  font-weight:700;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  box-shadow: var(--ei-shadow-sm);
+  position: relative;
+  z-index: 1;
 }
-h4 { margin:0 0 .3rem; color:var(--ei-primary); font-size:1.08rem; }
-p { margin:0; color:var(--ei-muted); line-height:1.75; }
+
+h4 { 
+  margin: 0 0 var(--space-xs);
+  color: var(--ei-primary);
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+p { 
+  margin: 0;
+  color: var(--ei-muted);
+  line-height: 1.65;
+  font-size: 0.9375rem;
+}

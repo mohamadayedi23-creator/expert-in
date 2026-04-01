@@ -1,0 +1,9 @@
+<app-section-wrapper title="Approche" lead="Une demarche structuree en 4 etapes pour transformer la strategie en resultats mesurables.">
+  <div class="approche-grid">
+    <article class="step-card" *ngFor="let step of steps; let i = index">
+      <span class="step-index">0{{ i + 1 }}</span>
+      <h3>{{ step.title }}</h3>
+      <p>{{ step.description }}</p>
+    </article>
+  </div>
+</app-section-wrapper>

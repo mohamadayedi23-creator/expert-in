@@ -1,4 +1,10 @@
-.block { padding: 4rem 0; }
-@media (min-width: 992px) {
-  .block { padding: 5rem 0; }
+/* Section Wrapper — Consistent Spacing */
+.block { 
+  padding: var(--space-2xl) 0;
+}
+
+@media (min-width: 768px) {
+  .block { 
+    padding: var(--space-3xl) 0;
+  }
 }

@@ -1,16 +1,43 @@
+/* Info Card — Premium Service Card */
 .card {
   background: var(--ei-surface);
   border: 1px solid var(--ei-border);
-  border-radius: 16px;
-  padding: 1.35rem;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
   height: 100%;
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  display: flex;
+  flex-direction: column;
+  transition: 
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
 }
+
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--ei-shadow);
-  border-color: #c7d5eb;
+  transform: translateY(-4px);
+  box-shadow: var(--ei-shadow-lg);
+  border-color: transparent;
 }
-ion-icon { font-size: 1.45rem; color: var(--ei-accent); }
-h3 { margin: .6rem 0 .55rem; color: var(--ei-primary); font-size: 1.06rem; letter-spacing: -.01em; }
-p { margin: 0; color: var(--ei-muted); line-height: 1.75; font-size: .94rem; }
+
+ion-icon { 
+  font-size: 1.5rem;
+  color: var(--ei-accent);
+  flex-shrink: 0;
+}
+
+h3 { 
+  margin: var(--space-sm) 0 var(--space-xs);
+  color: var(--ei-primary);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+p { 
+  margin: 0;
+  color: var(--ei-muted);
+  line-height: 1.65;
+  font-size: 0.9375rem;
+  flex-grow: 1;
+}

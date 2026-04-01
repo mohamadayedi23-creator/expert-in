@@ -1,0 +1,42 @@
+.approche-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+}
+
+.step-card {
+  background: var(--ei-surface);
+  border: 1px solid var(--ei-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ei-shadow-lg);
+}
+
+.step-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: var(--ei-accent-light);
+  color: var(--ei-accent);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+h3 {
+  margin: 0 0 var(--space-xs);
+  color: var(--ei-primary);
+}
+
+p {
+  margin: 0;
+  color: var(--ei-muted);
+  line-height: 1.7;
+}

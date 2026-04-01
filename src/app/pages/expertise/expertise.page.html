@@ -1,8 +1,100 @@
-<app-section-wrapper title="Nos domaines d'expertise" lead="Des solutions orientées décision pour transformer durablement votre organisation.">
-  <div class="expertise-grid">
-    <article *ngFor="let block of blocks">
-      <h3>{{ block.title }}</h3>
-      <ul><li *ngFor="let item of block.items">{{ item }}</li></ul>
+<section class="expertise-hero">
+  <div class="container">
+    <span class="eyebrow">Nos expertises</span>
+    <h1 class="hero-title">Une offre integree pour piloter votre performance et accelerer vos transformations.</h1>
+    <p class="hero-lead">Strategie, finance, marketing, RSE et digital: des expertises complementaires mobilisees selon vos priorites business.</p>
+  </div>
+</section>
+
+<app-section-wrapper title="Expertise" lead="Des expertises complementaires en strategie, finance, marketing, RSE et transformation digitale.">
+  <div class="pillars-grid">
+    <article class="pillar-card">
+      <ion-icon name="analytics-outline"></ion-icon>
+      <h3>Strategie</h3>
+      <p>Decisions structurees, pilotage et creation de valeur durable.</p>
+    </article>
+    <article class="pillar-card">
+      <ion-icon name="business-outline"></ion-icon>
+      <h3>Finance</h3>
+      <p>Direction financiere externalisee et securisation des trajectoires.</p>
+    </article>
+    <article class="pillar-card">
+      <ion-icon name="globe-outline"></ion-icon>
+      <h3>Developpement</h3>
+      <p>Marketing, internationalisation et execution operationnelle.</p>
+    </article>
+  </div>
+
+  <div class="expertise-stack">
+    <article class="expertise-block">
+      <h3>Management et Strategie</h3>
+      <p>Nous accompagnons les dirigeants et investisseurs sur les decisions strategiques a forte valeur ajoutee.</p>
+      <ul>
+        <li><strong>Strategie generale d entreprise :</strong> definition du positionnement strategique, structuration des projets de croissance, restructuration ou investissement.</li>
+        <li><strong>Diagnostic organisationnel :</strong> analyse du fonctionnement global, des responsabilites, des processus de decision et des outils de gestion.</li>
+        <li><strong>Gouvernance et pilotage :</strong> clarifier les roles, renforcer les processus de decision et mettre en place des indicateurs fiables.</li>
+        <li><strong>Conduite du changement :</strong> preparation, structuration et pilotage des transformations organisationnelles et operationnelles.</li>
+        <li><strong>Accompagnement a l internationalisation :</strong> analyse des marches cibles, choix du modele d implantation et securisation des aspects juridiques, fiscaux et organisationnels.</li>
+      </ul>
+    </article>
+
+    <article class="expertise-block">
+      <h3>Direction Administrative et Financiere Externalisee</h3>
+      <p>Une direction financiere experte, flexible et orientee performance sans recrutement a temps plein.</p>
+      <ul>
+        <li><strong>Direction financiere a temps partage :</strong> pilotage financier, structuration des processus et accompagnement des decisions strategiques.</li>
+        <li><strong>Pilotage financier et tableaux de bord :</strong> definition des KPI, tableaux de bord et analyses regulieres pour eclairer les decisions.</li>
+        <li><strong>Elaboration des business plans :</strong> modelisation economique, axes de croissance, evaluation des risques et previsions financieres detaillees.</li>
+        <li><strong>Optimisation de la tresorerie :</strong> diagnostic des flux, optimisation du BFR et mise en place d outils de pilotage performants.</li>
+        <li><strong>Restructuration financiere :</strong> diagnostic financier, scenarios de restructuration, optimisation du capital et accompagnement des negociations.</li>
+      </ul>
+    </article>
+
+    <article class="expertise-block">
+      <h3>Consultation Marketing Strategique et Branding</h3>
+      <p>Nous construisons une strategie marketing claire et une marque solide pour soutenir la croissance.</p>
+      <ul>
+        <li><strong>Analyse du marche et de l environnement :</strong> etude des besoins, concurrence, macro-environnement et facteurs cles de succes.</li>
+        <li><strong>Analyse produit et positionnement :</strong> adaptation de l offre, evaluation du portefeuille et clarification du positionnement.</li>
+        <li><strong>Segmentation, ciblage et positionnement :</strong> identification des segments prioritaires et definition d une image distinctive.</li>
+        <li><strong>Strategie marketing proposee :</strong> definition d objectifs SMART et d un plan d actions sur 3 a 5 ans.</li>
+        <li><strong>Elaboration du plan marketing :</strong> structuration autour du mix-marketing pour organiser l offre, le prix, la distribution et la communication.</li>
+        <li><strong>Branding et capital marque :</strong> renforcement de la notoriete, fidelite, qualite percue et associations a la marque.</li>
+      </ul>
+    </article>
+
+    <article class="expertise-block">
+      <h3>RSE et Developpement Durable</h3>
+      <p>Nous integrons les enjeux ESG dans le pilotage global pour renforcer la performance durable.</p>
+      <ul>
+        <li><strong>Diagnostic RSE :</strong> evaluation des pratiques environnementales, sociales, societales et de gouvernance.</li>
+        <li><strong>Strategie ESG :</strong> identification des enjeux prioritaires, definition d objectifs mesurables et indicateurs de suivi.</li>
+        <li><strong>Reporting extra-financier :</strong> structuration des processus de collecte, tableaux de bord ESG et alignement avec la strategie globale.</li>
+      </ul>
+    </article>
+
+    <article class="expertise-block">
+      <h3>Conseil et Accompagnement dans la Digitalisation des Entreprises</h3>
+      <p>La transformation numerique est un levier strategique de performance, competitivite et resilience.</p>
+      <ul>
+        <li><strong>Diagnostic digital et organisationnel :</strong> analyse des systemes existants, des processus metiers et de la maturite numerique.</li>
+        <li><strong>Definition de la strategie digitale :</strong> feuille de route alignee sur les priorites business et les gains de productivite.</li>
+        <li><strong>Optimisation et automatisation :</strong> digitalisation des fonctions cles (finance, gestion, reporting, controle interne).</li>
+        <li><strong>Pilotage de la performance :</strong> mise en place de tableaux de bord, KPI et reporting automatise.</li>
+        <li><strong>Projets accompagnes :</strong> ERP, CRM, BI, dematerialisation, cybersecurite, data analytics et transformation globale.</li>
+      </ul>
+    </article>
+
+    <article class="expertise-block">
+      <h3>Conduite du Changement liee aux Projets Informatiques</h3>
+      <p>Au-dela des outils, la digitalisation implique une evolution des pratiques, des competences et de la culture.</p>
+      <ul>
+        <li>Analyse des impacts sur les processus, roles, organisation et risques d adoption.</li>
+        <li>Definition de la strategie de changement et gouvernance associee.</li>
+        <li>Mobilisation des equipes via communication, ateliers collaboratifs et accompagnement des managers.</li>
+        <li>Formation et montee en competences digitales avec dispositifs d assistance au demarrage.</li>
+        <li>Pilotage de l adoption et de la performance en amelioration continue.</li>
+      </ul>
     </article>
   </div>
 </app-section-wrapper>

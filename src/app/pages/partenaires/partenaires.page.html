@@ -1,0 +1,28 @@
+<app-section-wrapper title="Partenaires" lead="Un ecosysteme de cabinets et d experts complementaires en France et a l international.">
+  <div class="partners-stack">
+    <section class="partner-group">
+      <h3>Cabinets du meme groupe</h3>
+      <article class="partner-card" *ngFor="let cabinet of groupCabinets">
+        <h4>{{ cabinet.name }}</h4>
+        <p>{{ cabinet.description }}</p>
+        <ul>
+          <li *ngFor="let detail of cabinet.details">{{ detail }}</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="partner-group">
+      <h3>Partenaires en France</h3>
+      <ul class="partner-list">
+        <li *ngFor="let partner of francePartners">{{ partner }}</li>
+      </ul>
+    </section>
+
+    <section class="partner-group">
+      <h3>Partenaires internationaux</h3>
+      <ul class="partner-list">
+        <li *ngFor="let partner of internationalPartners">{{ partner }}</li>
+      </ul>
+    </section>
+  </div>
+</app-section-wrapper>

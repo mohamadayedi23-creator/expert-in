@@ -1,9 +1,22 @@
 <ion-header class="nav-header">
   <ion-toolbar class="container nav-toolbar">
-    <a routerLink="/" class="brand">EXPERT IN</a>
-    <ion-buttons>
-      <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: link.path === '' }">{{ link.label }}</a>
-    </ion-buttons>
-    <a routerLink="/contact" class="contact-pill">Prendre RDV</a>
+    <div class="toolbar-container">
+      <a routerLink="/" class="brand" (click)="closeMobileMenu()">EXPERT IN</a>
+
+      <button class="menu-toggle" type="button" (click)="toggleMobileMenu()" [attr.aria-expanded]="isMobileMenuOpen" aria-label="Ouvrir le menu">
+        <ion-icon [name]="isMobileMenuOpen ? 'close-outline' : 'menu-outline'"></ion-icon>
+      </button>
+
+      <ion-buttons>
+        <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: link.path === '' }">{{ link.label }}</a>
+      </ion-buttons>
+      <a routerLink="/contact" class="contact-pill">Prendre RDV</a>
+    </div>
+
+    <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+      <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: link.path === '' }" (click)="closeMobileMenu()">{{ link.label }}</a>
+      <a routerLink="/contact" class="mobile-contact-pill" (click)="closeMobileMenu()">Prendre RDV</a>
+    </div>
   </ion-toolbar>
 </ion-header>

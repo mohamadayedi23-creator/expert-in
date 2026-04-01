@@ -1,5 +1,56 @@
-footer { background: linear-gradient(160deg, #091833, #122752); color: #d2dbeb; }
-.footer-grid { display:grid; gap:1.2rem; padding:2.4rem 0; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); }
-h4,h5 { color:#fff; margin:0 0 .5rem; letter-spacing:.01em; }
-p { margin:0 0 .4rem; color:#c9d3e7; line-height:1.7; }
-.copyright { border-top:1px solid rgba(203,217,240,.24); text-align:center; padding:1rem; font-size:.84rem; }
+/* Footer — Premium Dark Section */
+footer { 
+  background: linear-gradient(165deg, var(--ei-primary) 0%, var(--ei-primary-strong) 100%);
+  color: #cbd5e1; 
+}
+
+.footer-grid { 
+  display: grid;
+  gap: var(--space-xl);
+  padding: var(--space-2xl) 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+h4 { 
+  color: #fff; 
+  margin: 0 0 var(--space-sm);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+h5 { 
+  color: #fff; 
+  margin: 0 0 var(--space-xs);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+p { 
+  margin: 0;
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 0.9375rem;
+}
+
+p + p {
+  margin-top: var(--space-xs);
+}
+
+.copyright { 
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: var(--space-md);
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+@media (max-width: 427px) {
+  footer {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+}

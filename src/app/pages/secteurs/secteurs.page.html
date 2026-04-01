@@ -1,0 +1,24 @@
+<app-section-wrapper title="Secteurs" lead="Une expertise multisectorielle adossee a une comprehension fine des enjeux metiers, reglementaires et operationnels.">
+  <div class="content-grid">
+    <article class="panel">
+      <h3>Secteurs d activite</h3>
+      <ul>
+        <li *ngFor="let sector of sectors">{{ sector }}</li>
+      </ul>
+    </article>
+
+    <article class="panel">
+      <h3>Nous ont fait confiance - En France</h3>
+      <ul>
+        <li *ngFor="let item of franceReferences">{{ item }}</li>
+      </ul>
+    </article>
+
+    <article class="panel">
+      <h3>Nous ont fait confiance - A l etranger</h3>
+      <ul>
+        <li *ngFor="let item of internationalReferences">{{ item }}</li>
+      </ul>
+    </article>
+  </div>
+</app-section-wrapper>

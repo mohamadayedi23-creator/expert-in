@@ -1,16 +1,79 @@
-<app-section-wrapper title="Contact" lead="Discutons de vos enjeux stratégiques et de transformation.">
+<section class="contact-hero">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h1 class="hero-title">Parlons de vos enjeux strategiques et operationnels.</h1>
+    <p class="hero-lead">Nous vous repondons rapidement pour cadrer votre besoin, definir les priorites et construire une premiere feuille de route.</p>
+  </div>
+</section>
+
+<app-section-wrapper title="Contact" lead="Echangeons sur vos enjeux de strategie, finance, transformation et developpement international.">
   <div class="contact-layout">
-    <form [formGroup]="form" class="form">
-      <ion-item><ion-label position="stacked">Nom</ion-label><ion-input formControlName="name"></ion-input></ion-item>
-      <ion-item><ion-label position="stacked">Email</ion-label><ion-input type="email" formControlName="email"></ion-input></ion-item>
-      <ion-item><ion-label position="stacked">Message</ion-label><ion-textarea rows="5" formControlName="message"></ion-textarea></ion-item>
-      <ion-button expand="block" [disabled]="form.invalid">Envoyer la demande</ion-button>
-    </form>
-    <aside>
-      <h3>Suivez-nous</h3>
-      <p>LinkedIn · X · YouTube</p>
-      <p>Paris · Tunis · Casablanca</p>
-      <p>contact@expert-in.com</p>
+    <aside class="contact-info">
+      <h3>Coordonnees</h3>
+      <ul>
+        <li><ion-icon name="mail-outline"></ion-icon><span>contact@expert-in.com</span></li>
+        <li><ion-icon name="location-outline"></ion-icon><span>Paris · Tunis · Casablanca</span></li>
+        <li><ion-icon name="logo-linkedin"></ion-icon><span>EXPERT IN sur LinkedIn</span></li>
+        <li><ion-icon name="call-outline"></ion-icon><span>Premier echange de cadrage sur rendez-vous</span></li>
+      </ul>
+
+      <div class="contact-note">
+        <h4>Delai de reponse</h4>
+        <p>Notre equipe revient vers vous rapidement avec une proposition d echange adaptee a votre contexte.</p>
+      </div>
     </aside>
+
+    <section class="maps-panel">
+      <h3>Nos implantations</h3>
+      <div class="maps-grid">
+        <article class="office-card">
+          <div class="office-head">
+            <ion-icon name="location-outline"></ion-icon>
+            <div>
+              <h4>Paris</h4>
+              <p>48.8566, 2.3522</p>
+            </div>
+          </div>
+          <iframe
+            title="Carte Paris"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=48.8566,2.3522&z=13&output=embed">
+          </iframe>
+        </article>
+
+        <article class="office-card">
+          <div class="office-head">
+            <ion-icon name="location-outline"></ion-icon>
+            <div>
+              <h4>Tunis</h4>
+              <p>36.8065, 10.1815</p>
+            </div>
+          </div>
+          <iframe
+            title="Carte Tunis"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=36.8065,10.1815&z=13&output=embed">
+          </iframe>
+        </article>
+
+        <article class="office-card">
+          <div class="office-head">
+            <ion-icon name="location-outline"></ion-icon>
+            <div>
+              <h4>Casablanca</h4>
+              <p>33.5731, -7.5898</p>
+            </div>
+          </div>
+          <iframe
+            title="Carte Casablanca"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=33.5731,-7.5898&z=13&output=embed">
+          </iframe>
+        </article>
+      </div>
+    </section>
   </div>
 </app-section-wrapper>

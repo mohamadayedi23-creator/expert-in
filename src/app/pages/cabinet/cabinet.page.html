@@ -1,26 +1,118 @@
-<app-section-wrapper title="Le Cabinet" lead="EXPERT IN est un cabinet indépendant à ADN entrepreneurial, dédié aux dirigeants et investisseurs.">
-  <p class="section-lead">Nous combinons vision stratégique, expertise opérationnelle et intelligence sectorielle pour sécuriser vos décisions majeures.</p>
-</app-section-wrapper>
-
-<app-section-wrapper title="Présence internationale">
-  <div class="grid grid-3">
-    <app-info-card icon="location-outline" title="France" description="Accompagnement des ETI, groupes et fonds d'investissement."></app-info-card>
-    <app-info-card icon="location-outline" title="Tunisie" description="Hub régional pour les transformations opérationnelles et RSE."></app-info-card>
-    <app-info-card icon="location-outline" title="Maroc" description="Pilotage de projets de croissance et d'internationalisation."></app-info-card>
+<!-- Hero Section -->
+<section class="cabinet-hero">
+  <div class="container">
+    <span class="eyebrow">À propos</span>
+    <h1 class="hero-title">Le Cabinet</h1>
+    <p class="hero-lead">
+      EXPERT IN est un cabinet de conseil specialise en strategie, management et transformation des organisations, pionnier dans l accompagnement des entreprises dans le pilotage de leurs activites.
+    </p>
+    <p class="hero-sub">
+      A l intersection de la strategie, de la finance et du digital, nous apportons une vision globale et structuree combinee a une execution rigoureuse pour <strong>des transformations a fort impact</strong>.
+    </p>
   </div>
-</app-section-wrapper>
+</section>
 
-<app-section-wrapper title="Notre équipe">
-  <div class="grid grid-3">
-    <app-info-card *ngFor="let member of team" icon="people-outline" [title]="member.name + ' — ' + member.role" [description]="member.description"></app-info-card>
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number">15<span class="stat-suffix">+</span></span>
+        <span class="stat-label">Années d'expérience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">200<span class="stat-suffix">+</span></span>
+        <span class="stat-label">Missions réalisées</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Pays d'implantation</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">98<span class="stat-suffix">%</span></span>
+        <span class="stat-label">Clients satisfaits</span>
+      </div>
+    </div>
   </div>
-</app-section-wrapper>
+</section>
 
-<app-section-wrapper title="Pourquoi nous choisir">
-  <ul class="why-list">
-    <li>Approche conseil + exécution orientée résultats mesurables.</li>
-    <li>Experts seniors intervenant directement sur les missions critiques.</li>
-    <li>Excellence méthodologique et confidentialité absolue.</li>
-    <li>Vision internationale adaptée aux réalités locales.</li>
-  </ul>
-</app-section-wrapper>
+<!-- Presence Section -->
+<section class="presence-section">
+  <div class="container">
+    <h2 class="section-heading">Présence internationale</h2>
+    <p class="section-subtitle">Un reseau de partenaires en France, Tunisie et Maroc pour accompagner l internationalisation de nos clients</p>
+    
+    <div class="presence-grid">
+      <article class="presence-card presence-france">
+        <div class="presence-flag">🇫🇷</div>
+        <h3>France</h3>
+        <p>Accompagnement strategique et operationnel des entreprises, investisseurs et groupes en phase de croissance.</p>
+        <span class="presence-city">Paris</span>
+      </article>
+      
+      <article class="presence-card presence-tunisie">
+        <div class="presence-flag">🇹🇳</div>
+        <h3>Tunisie</h3>
+        <p>Ancrage historique du groupe avec des expertises complementaires en finance, pilotage et transformation.</p>
+        <span class="presence-city">Tunis</span>
+      </article>
+      
+      <article class="presence-card presence-maroc">
+        <div class="presence-flag">🇲🇦</div>
+        <h3>Maroc</h3>
+        <p>Developpement de projets de croissance, partenariats locaux et accompagnement des implantations internationales.</p>
+        <span class="presence-city">Casablanca</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+  <div class="container">
+    <h2 class="section-heading">Notre équipe</h2>
+    <p class="section-subtitle">Des profils experimentes en strategie, finance, marketing et transformation</p>
+    
+    <div class="team-grid">
+      <article class="team-card" *ngFor="let member of team">
+        <div class="team-avatar" [attr.data-initials]="getInitials(member.name)">
+          <span>{{ getInitials(member.name) }}</span>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">{{ member.name }}</h3>
+          <span class="team-role">{{ member.role }}</span>
+          <p class="team-desc">{{ member.description }}</p>
+        </div>
+        <div class="team-social">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-content">
+      <div class="why-text">
+        <h2 class="section-heading">Pourquoi nous choisir</h2>
+        <p class="section-subtitle">Choisir EXPERT IN, c est choisir un accompagnement fiable, structure et orienté resultat</p>
+      </div>
+      
+      <div class="why-grid">
+        <div class="why-item" *ngFor="let item of whyChoose">
+          <div class="why-icon">
+            <ion-icon [name]="item.icon"></ion-icon>
+          </div>
+          <div class="why-details">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
