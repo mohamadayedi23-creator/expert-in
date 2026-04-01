@@ -1,0 +1,35 @@
+.nav-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(15, 39, 77, .08);
+}
+
+.nav-toolbar {
+  --background: rgba(255,255,255,0.9);
+  --border-style: none;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: .8rem 0;
+}
+
+.brand { font-weight: 800; letter-spacing: .12em; color: var(--ei-primary); font-size: .95rem; }
+ion-buttons { display: none; justify-content: center; gap: 1.3rem; }
+ion-buttons a { font-size: .92rem; color: var(--ei-muted); position: relative; }
+ion-buttons a::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 0; height: 2px; background: var(--ei-accent); transition: .2s ease; }
+ion-buttons a:hover, ion-buttons a.active { color: var(--ei-primary); }
+ion-buttons a:hover::after, ion-buttons a.active::after { width: 100%; }
+
+.contact-pill {
+  border: 1px solid var(--ei-border);
+  color: var(--ei-primary);
+  padding: .5rem .85rem;
+  border-radius: 100px;
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+@media (min-width: 992px) { ion-buttons { display: flex; } }

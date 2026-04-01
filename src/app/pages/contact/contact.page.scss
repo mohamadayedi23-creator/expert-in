@@ -1,0 +1,11 @@
+.contact-layout { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); align-items:start; }
+.form, aside {
+  background:#fff;
+  border:1px solid var(--ei-border);
+  border-radius:14px;
+  padding:1.2rem;
+  box-shadow: 0 10px 26px rgba(9, 30, 69, .05);
+}
+.form { display: grid; gap: .6rem; }
+aside h3 { margin:0 0 .9rem; color:var(--ei-primary); }
+aside p { color:var(--ei-muted); line-height: 1.8; margin: 0 0 .3rem; }
