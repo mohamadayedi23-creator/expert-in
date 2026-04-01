@@ -1,0 +1,17 @@
+<app-section-wrapper title="Le Cabinet" lead="EXPERT IN est un cabinet indépendant à ADN entrepreneurial, dédié aux dirigeants et investisseurs.">
+  <p class="section-lead">Nous combinons vision stratégique, expertise opérationnelle et intelligence sectorielle pour sécuriser vos décisions majeures.</p>
+</app-section-wrapper>
+
+<app-section-wrapper title="Présence internationale">
+  <div class="grid grid-3">
+    <app-info-card icon="location-outline" title="France" description="Accompagnement des ETI, groupes et fonds d'investissement."></app-info-card>
+    <app-info-card icon="location-outline" title="Tunisie" description="Hub régional pour les transformations opérationnelles et RSE."></app-info-card>
+    <app-info-card icon="location-outline" title="Maroc" description="Pilotage de projets de croissance et d'internationalisation."></app-info-card>
+  </div>
+</app-section-wrapper>
+
+<app-section-wrapper title="Notre équipe">
+  <div class="grid grid-3">
+    <app-info-card *ngFor="let member of team" icon="people-outline" [title]="member.name + ' — ' + member.role" [description]="member.description"></app-info-card>
+  </div>
+</app-section-wrapper>

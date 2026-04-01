@@ -1,0 +1,5 @@
+footer { background: var(--ei-primary-strong); color: #d2d9e8; margin-top: 2.5rem; }
+.footer-grid { display:grid; gap:1rem; padding:2rem 0; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); }
+h4,h5 { color:#fff; margin:0 0 .5rem; }
+p { margin:0; color:#c7cfdf; line-height:1.6; }
+.copyright { border-top:1px solid #273557; text-align:center; padding:.9rem; font-size:.85rem; }

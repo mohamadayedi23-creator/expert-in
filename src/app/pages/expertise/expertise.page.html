@@ -1,0 +1,8 @@
+<app-section-wrapper title="Nos domaines d'expertise" lead="Des solutions orientées décision pour transformer durablement votre organisation.">
+  <div class="expertise-grid">
+    <article *ngFor="let block of blocks">
+      <h3>{{ block.title }}</h3>
+      <ul><li *ngFor="let item of block.items">{{ item }}</li></ul>
+    </article>
+  </div>
+</app-section-wrapper>
