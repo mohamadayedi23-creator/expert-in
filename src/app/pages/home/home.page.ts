@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
-import { IonButton, IonContent } from '@ionic/angular/standalone';
+import { IonButton } from '@ionic/angular/standalone';
 import { SectionWrapperComponent } from '../../shared/components/section-wrapper/section-wrapper.component';
 import { InfoCardComponent } from '../../shared/components/info-card/info-card.component';
 
 @Component({
   standalone: true,
-  imports: [IonContent, RouterLink, NgFor, IonButton, SectionWrapperComponent, InfoCardComponent],
+  imports: [RouterLink, NgFor, IonButton, SectionWrapperComponent, InfoCardComponent],
   templateUrl: './home.page.html',
   styleUrl: './home.page.scss'
 })
