@@ -1,20 +1,10 @@
 <app-section-wrapper title="Contact" lead="Discutons de vos enjeux stratégiques et de transformation.">
   <div class="contact-layout">
-    <form [formGroup]="form" class="form" (ngSubmit)="onSubmit()" novalidate>
-      <ion-item>
-        <ion-label position="stacked">Nom</ion-label>
-        <ion-input formControlName="name" autocomplete="name"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Email</ion-label>
-        <ion-input type="email" formControlName="email" autocomplete="email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Message</ion-label>
-        <ion-textarea rows="5" formControlName="message"></ion-textarea>
-      </ion-item>
-      <ion-button type="submit" expand="block" [disabled]="form.invalid">Envoyer la demande</ion-button>
-      <p class="form-status" *ngIf="submitted">Votre client e-mail va s'ouvrir avec votre message prérempli.</p>
+    <form [formGroup]="form" class="form">
+      <ion-item><ion-label position="stacked">Nom</ion-label><ion-input formControlName="name"></ion-input></ion-item>
+      <ion-item><ion-label position="stacked">Email</ion-label><ion-input type="email" formControlName="email"></ion-input></ion-item>
+      <ion-item><ion-label position="stacked">Message</ion-label><ion-textarea rows="5" formControlName="message"></ion-textarea></ion-item>
+      <ion-button expand="block" [disabled]="form.invalid">Envoyer la demande</ion-button>
     </form>
     <aside>
       <h3>Suivez-nous</h3>

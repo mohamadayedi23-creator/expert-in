@@ -6,7 +6,8 @@ import { InfoCardComponent } from '../../shared/components/info-card/info-card.c
 @Component({
   standalone: true,
   imports: [NgFor, SectionWrapperComponent, InfoCardComponent],
-  templateUrl: './cabinet.page.html'
+  templateUrl: './cabinet.page.html',
+  styleUrl: './cabinet.page.scss'
 })
 export class CabinetPageComponent {
   team = [

@@ -1,13 +1,9 @@
 <ion-header class="nav-header">
   <ion-toolbar class="container nav-toolbar">
-    <div class="nav-row">
-      <a routerLink="/" class="brand" (click)="closeMenu()">EXPERT IN</a>
-      <button type="button" class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-label="Afficher la navigation">
-        {{ menuOpen ? 'Fermer' : 'Menu' }}
-      </button>
-    </div>
-    <nav class="nav-links" [class.is-open]="menuOpen" aria-label="Navigation principale">
-      <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: link.path === '' }" (click)="closeMenu()">{{ link.label }}</a>
-    </nav>
+    <a routerLink="/" class="brand">EXPERT IN</a>
+    <ion-buttons>
+      <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: link.path === '' }">{{ link.label }}</a>
+    </ion-buttons>
+    <a routerLink="/contact" class="contact-pill">Prendre RDV</a>
   </ion-toolbar>
 </ion-header>

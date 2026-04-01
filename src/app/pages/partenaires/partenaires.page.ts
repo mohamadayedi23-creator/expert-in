@@ -12,7 +12,22 @@ import { SectionWrapperComponent } from '../../shared/components/section-wrapper
       </div>
     </app-section-wrapper>
   `,
-  styles: [`.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;} .logos div{background:#fff;border:1px solid var(--ei-border);border-radius:10px;padding:1rem;display:grid;place-items:center;min-height:84px;font-weight:600;color:var(--ei-primary);}`]
+  styles: [`
+    .logos { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; }
+    .logos div {
+      background:#fff;
+      border:1px solid var(--ei-border);
+      border-radius:14px;
+      padding:1.1rem;
+      display:grid;
+      place-items:center;
+      min-height:88px;
+      font-weight:600;
+      color:var(--ei-primary);
+      transition:.2s ease;
+    }
+    .logos div:hover { transform: translateY(-3px); box-shadow: var(--ei-shadow); }
+  `]
 })
 export class PartenairesPageComponent {
   partners = ['Expert Up Tunisia', 'Expert One Morocco', 'Partenaires France', 'Réseau international'];
