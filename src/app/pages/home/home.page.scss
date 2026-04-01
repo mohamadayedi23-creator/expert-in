@@ -1,0 +1,7 @@
+.hero { background: linear-gradient(130deg, #091a3c, #163168 56%, #233f76); color:#fff; padding:4.5rem 0 3.7rem; }
+.eyebrow { text-transform:uppercase; letter-spacing:.09em; font-size:.76rem; opacity:.85; }
+h1 { margin:.25rem 0 .9rem; font-size: clamp(1.9rem, 4vw, 3.25rem); line-height:1.15; max-width:800px; }
+p { max-width:760px; color: #d8e2f8; line-height:1.75; }
+.cta-wrap { display:flex; gap:1rem; align-items:center; margin-top:1.1rem; flex-wrap:wrap; }
+.ghost { color:#fff; border:1px solid rgba(255,255,255,.35); padding:.66rem .9rem; border-radius:8px; }
+.value-list { margin:0; padding-left:1.2rem; color:var(--ei-muted); line-height:1.8; }

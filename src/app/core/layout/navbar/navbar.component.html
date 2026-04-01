@@ -1,0 +1,8 @@
+<ion-header class="nav-header">
+  <ion-toolbar class="container nav-toolbar">
+    <a routerLink="/" class="brand">EXPERT IN</a>
+    <ion-buttons>
+      <a *ngFor="let link of links" [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: link.path === '' }">{{ link.label }}</a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

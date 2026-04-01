@@ -1,0 +1,4 @@
+.contact-layout { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+.form, aside { background:#fff; border:1px solid var(--ei-border); border-radius:12px; padding:1rem; }
+aside h3 { margin-top:0; color:var(--ei-primary); }
+aside p { color:var(--ei-muted); }

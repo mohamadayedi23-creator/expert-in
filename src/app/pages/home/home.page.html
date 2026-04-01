@@ -1,0 +1,25 @@
+<section class="hero fade-in">
+  <div class="container">
+    <p class="eyebrow">Cabinet Conseil International</p>
+    <h1>Accélérez vos décisions stratégiques avec EXPERT IN.</h1>
+    <p>Nous accompagnons les dirigeants pour structurer, financer et transformer leurs organisations dans un contexte d'exigence globale.</p>
+    <div class="cta-wrap">
+      <ion-button routerLink="/contact">Planifier un échange</ion-button>
+      <a routerLink="/expertise" class="ghost">Découvrir nos expertises</a>
+    </div>
+  </div>
+</section>
+
+<app-section-wrapper title="Nos expertises clés" lead="Un accompagnement 360° au service de votre croissance, de votre résilience et de votre compétitivité.">
+  <div class="grid grid-2">
+    <app-info-card *ngFor="let item of services" [icon]="item[0]" [title]="item[1]" [description]="item[2]"></app-info-card>
+  </div>
+</app-section-wrapper>
+
+<app-section-wrapper title="Pourquoi choisir EXPERT IN" lead="Une approche senior, orientée résultats, avec un engagement fort sur la qualité d'exécution.">
+  <ul class="value-list">
+    <li>Conseil sur-mesure avec forte proximité dirigeant.</li>
+    <li>Expertise multiculturelle France · Tunisie · Maroc.</li>
+    <li>Méthodologie robuste, orientée impact business.</li>
+  </ul>
+</app-section-wrapper>
