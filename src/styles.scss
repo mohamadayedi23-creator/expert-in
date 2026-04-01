@@ -22,3 +22,15 @@ a { color: inherit; text-decoration: none; }
 .fade-in { animation: fadeIn .8s ease both; }
 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+
+ion-content {
+  --overflow: visible;
+  contain: none;
+  height: auto;
+}
+
+ion-content::part(scroll) {
+  position: relative;
+  inset: auto;
+  overflow: visible;
+}

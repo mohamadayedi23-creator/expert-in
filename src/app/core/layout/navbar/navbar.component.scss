@@ -1,7 +1,44 @@
-.nav-header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(8px); }
-.nav-toolbar { --background: rgba(255,255,255,0.94); --border-style: none; display: flex; align-items: center; justify-content: space-between; padding: .65rem 0; }
-.brand { font-weight: 800; letter-spacing: .08em; color: var(--ei-primary); }
-ion-buttons { display: none; gap: 1rem; }
-a { font-size: .9rem; color: var(--ei-muted); transition: .2s ease; }
-a:hover, a.active { color: var(--ei-primary); }
-@media (min-width: 992px) { ion-buttons { display: flex; } }
+.nav-header {
+    position: sticky;
+    top: 0;
+    z-index: 20; 
+    --background: #fff;
+    background: #fff; 
+}
+
+.nav-toolbar {
+    --background: rgba(255, 255, 255, 0.94);
+    --border-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .65rem 0;
+}
+
+.brand {
+    font-weight: 800;
+    letter-spacing: .08em;
+    color: var(--ei-primary);
+}
+
+ion-buttons {
+    display: none;
+    gap: 1rem;
+}
+
+a {
+    font-size: .9rem;
+    color: var(--ei-muted);
+    transition: .2s ease;
+}
+
+a:hover,
+a.active {
+    color: var(--ei-primary);
+}
+
+@media (min-width: 992px) {
+    ion-buttons {
+        display: flex;
+    }
+}
