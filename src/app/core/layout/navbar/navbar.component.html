@@ -1,7 +1,9 @@
 <ion-header class="nav-header">
   <ion-toolbar class="container nav-toolbar">
     <div class="toolbar-container">
-      <a routerLink="/" class="brand" (click)="closeMobileMenu()">EXPERT IN</a>
+      <a routerLink="/" class="brand" (click)="closeMobileMenu()">
+        <img src="../../../../assets/img/logo-expertin.png" style="height: 48px;width: auto;" alt="">
+      </a>
 
       <button class="menu-toggle" type="button" (click)="toggleMobileMenu()" [attr.aria-expanded]="isMobileMenuOpen" aria-label="Ouvrir le menu">
         <ion-icon [name]="isMobileMenuOpen ? 'close-outline' : 'menu-outline'"></ion-icon>
