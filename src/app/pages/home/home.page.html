@@ -1,54 +1,209 @@
-<section class="home-hero fade-in">
-  <div class="container">
-    <p class="eyebrow">Cabinet conseil international</p>
-    <h1 class="hero-title">Accelerez vos decisions strategiques avec EXPERT IN.</h1>
-    <p class="hero-lead">Nous accompagnons les dirigeants pour structurer, financer et transformer leurs organisations dans un contexte d exigence globale.</p>
-    <p class="hero-sub">A l intersection de la strategie, de la finance et du digital, nous apportons un accompagnement rigoureux et orienté resultat.</p>
-    <div class="cta-wrap">
-      <ion-button routerLink="/contact">Planifier un échange</ion-button>
-      <a routerLink="/expertise" class="ghost">Découvrir nos expertises</a>
-    </div>
-  </div>
-</section>
+<!-- ════════════ HERO ════════════ -->
+<section class="home-hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-accent-line"></div>
 
-<section class="stats-section">
   <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item" *ngFor="let stat of stats">
-        <span class="stat-number">{{ stat.value }}</span>
-        <span class="stat-label">{{ stat.label }}</span>
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        Cabinet Conseil &amp; Comptabilité
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line-normal">Vos décisions.</span>
+        <span class="line-bold">Notre expertise.</span>
+        <span class="line-accent">Votre impact.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Nous transformons la complexité financière, stratégique et réglementaire
+        en avantage concret pour les dirigeants ambitieux.
+      </p>
+
+      <div class="hero-actions">
+        <a routerLink="/contact" class="btn-hero-primary">
+          Démarrer un projet
+          <ion-icon name="arrow-forward"></ion-icon>
+        </a>
+        <a routerLink="/expertise" class="btn-hero-ghost">
+          Voir nos expertises
+        </a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="hm-item" *ngFor="let stat of stats">
+          <strong>{{ stat.value }}</strong>
+          <span>{{ stat.label }}</span>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="hero-scroll-hint">
+    <span>Défiler</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
 
-<section class="expertise-section">
+<!-- ════════════ MARQUEE TICKER ════════════ -->
+<div class="ticker-strip">
+  <div class="ticker-track">
+    <span *ngFor="let pill of expertisePills" class="ticker-item">
+      <ion-icon name="diamond-outline"></ion-icon>
+      {{ pill.label }}
+    </span>
+    <span *ngFor="let pill of expertisePills" class="ticker-item" aria-hidden="true">
+      <ion-icon name="diamond-outline"></ion-icon>
+      {{ pill.label }}
+    </span>
+  </div>
+</div>
+
+<!-- ════════════ SERVICES ════════════ -->
+<section class="services-section">
   <div class="container">
-    <h2 class="section-heading">Nos expertises cles</h2>
-    <p class="section-subtitle">Un accompagnement 360° au service de votre croissance, de votre resilience et de votre competitivite.</p>
-    <div class="expertise-grid">
-      <article class="expertise-card" *ngFor="let item of services">
-        <div class="icon-wrap">
-          <ion-icon [name]="item.icon"></ion-icon>
+    <div class="section-intro">
+      <div class="intro-left">
+        <p class="overline">Ce que nous faisons</p>
+        <h2 class="section-title-big">Nos<br><em>Expertises</em></h2>
+      </div>
+      <div class="intro-right">
+        <p class="intro-text">
+          Un accompagnement 360° au service de votre croissance, résilience
+          et compétitivité — de la stratégie à l'exécution.
+        </p>
+        <a routerLink="/expertise" class="link-arrow">
+          Toutes nos expertises <ion-icon name="arrow-forward"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card" *ngFor="let s of services; let i = index">
+        <div class="sc-number">{{ (i + 1).toString().padStart(2, '0') }}</div>
+        <div class="sc-icon-wrap">
+          <ion-icon [name]="s.icon"></ion-icon>
         </div>
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
+        <h3 class="sc-title">{{ s.title }}</h3>
+        <p class="sc-desc">{{ s.description }}</p>
+        <a [routerLink]="s.link" class="sc-link">
+          En savoir plus <ion-icon name="arrow-forward"></ion-icon>
+        </a>
+        <div class="sc-hover-fill"></div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="why-section">
+<!-- ════════════ IMPACT NUMBERS ════════════ -->
+<section class="impact-section">
+  <div class="impact-bg-text" aria-hidden="true">IMPACT</div>
   <div class="container">
-    <div class="why-panel">
-      <h2 class="section-heading">Pourquoi choisir EXPERT IN</h2>
-      <p class="section-subtitle">Une approche senior, orientee resultats, avec un engagement fort sur la qualite d execution.</p>
-      <ul class="value-list">
-        <li *ngFor="let reason of reasons">
-          <ion-icon name="checkmark-circle-outline"></ion-icon>
-          <span>{{ reason }}</span>
-        </li>
-      </ul>
+    <div class="impact-header">
+      <p class="overline light">Notre bilan</p>
+      <h2 class="impact-title">Des chiffres qui <em>parlent</em></h2>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card" *ngFor="let stat of stats">
+        <div class="ic-bar"></div>
+        <div class="ic-value">{{ stat.value }}</div>
+        <div class="ic-label">{{ stat.label }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ APPROCHE ════════════ -->
+<section class="approche-section">
+  <div class="container">
+    <div class="approche-grid">
+      <div class="approche-visual">
+        <div class="av-card av-card--main">
+          <div class="av-icon"><ion-icon name="bulb-outline"></ion-icon></div>
+          <p>Vision stratégique</p>
+        </div>
+        <div class="av-card av-card--secondary">
+          <div class="av-icon"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
+          <p>Conformité &amp; audit</p>
+        </div>
+        <div class="av-card av-card--accent">
+          <div class="av-icon"><ion-icon name="flash-outline"></ion-icon></div>
+          <p>Exécution rapide</p>
+        </div>
+        <div class="av-line-h"></div>
+        <div class="av-line-v"></div>
+      </div>
+
+      <div class="approche-content">
+        <p class="overline">Notre ADN</p>
+        <h2 class="section-title-big">Une approche<br><em>différente</em></h2>
+        <ul class="approche-list">
+          <li *ngFor="let reason of reasons">
+            <div class="al-check"><ion-icon name="checkmark-outline"></ion-icon></div>
+            <span>{{ reason }}</span>
+          </li>
+        </ul>
+        <a routerLink="/approche" class="btn-solid">
+          Découvrir notre approche
+          <ion-icon name="arrow-forward"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SECTEURS ════════════ -->
+<section class="sectors-section">
+  <div class="container">
+    <div class="section-intro">
+      <div class="intro-left">
+        <p class="overline">Nos marchés</p>
+        <h2 class="section-title-big">Secteurs<br><em>d'activité</em></h2>
+      </div>
+      <div class="intro-right">
+        <p class="intro-text">
+          Une expertise sectorielle approfondie pour un accompagnement
+          vraiment adapté à vos enjeux spécifiques.
+        </p>
+        <a routerLink="/secteurs" class="link-arrow">
+          Tous les secteurs <ion-icon name="arrow-forward"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="sectors-grid">
+      <article class="sector-card" *ngFor="let sector of sectors">
+        <div class="sct-top">
+          <div class="sct-icon"><ion-icon [name]="sector.icon"></ion-icon></div>
+          <h3>{{ sector.title }}</h3>
+        </div>
+        <p>{{ sector.description }}</p>
+        <a [routerLink]="sector.link" class="sct-link">
+          En savoir plus <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ CTA BAND ════════════ -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <h2>Prêt à transformer<br>votre organisation ?</h2>
+        <p>Parlons de vos défis. Notre équipe senior répond sous 24h.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a routerLink="/contact" class="btn-cta-band">
+          Prendre rendez-vous
+          <ion-icon name="calendar-outline"></ion-icon>
+        </a>
+        <a routerLink="/expertise" class="btn-cta-ghost">
+          Nos expertises →
+        </a>
+      </div>
     </div>
   </div>
 </section>
